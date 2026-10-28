@@ -1,0 +1,77 @@
+@model OrganizacionEventos.Models.Evento
+
+@{
+
+    <p class="text-muted fw-bold small mb-2">Recientes usuarios que utilizaron el servicio:</p>
+
+    <div class="d-flex align-items-center gap-1 mb-3">
+    <span class="avatar">
+        <img class="avatar-img rounded-circle shadow-sm" src="~/images/perfil.jpg" alt="Perfil 1" style="width: 45px; height: 45px; object-fit: cover;" />
+    </span>
+    <span class="avatar">
+        <img class="avatar-img rounded-circle shadow-sm" src="~/images/perfil2.jpg" alt="Perfil 2" style="width: 45px; height: 45px; object-fit: cover;" />
+    </span>
+    <span class="avatar">
+        <img class="avatar-img rounded-circle shadow-sm" src="~/images/perfil3.jpg" alt="Perfil 3" style="width: 45px; height: 45px; object-fit: cover;" />
+    </span>
+    <span class="avatar">
+        <img class="avatar-img rounded-circle shadow-sm" src="~/images/perfil4.jpeg" alt="Perfil 4" style="width: 45px; height: 45px; object-fit: cover;" />
+    </span>
+    <span class="badge bg-secondary ms-2 p-2">+5</span>
+</div>
+
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white p-3">
+                    <h1 class="h4 mb-1">Registrar nuevo evento</h1>
+                    <p class="mb-0 small">Completa los datos para continuar.</p>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Crear" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        <div class="mb-3">
+                            <label asp-for="Nombre" class="form-label"></label>
+                            <input asp-for="Nombre" class="form-control" placeholder="Ej.: Bodas/baby shower" />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Fecha" class="form-label">Fecha</label>
+                            <input asp-for="Fecha" class="form-control" type="date" asp-format="{0:yyyy-MM-dd}" />
+                            <span asp-validation-for="Fecha" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Lugar" class="form-label">Lugar</label>
+                            <input asp-for="Lugar" class="form-control" placeholder="Ej.: Auditorio principal" />
+                            <span asp-validation-for="Lugar" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Categoria" class="form-label">Categoría</label>
+                            <input asp-for="Categoria" class="form-control" placeholder="Ej.: Elegante, gotico, romantico" />
+                            <span asp-validation-for="Categoria" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex flex-column flex-sm-row gap-2">
+                            <button type="submit" class="btn btn-success">Guardar evento</button>
+                            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Volver al inicio</a>
+                            <button type="button" class="btn-icon" aria-label="Magic">
+
+                                
+  
+                </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+}

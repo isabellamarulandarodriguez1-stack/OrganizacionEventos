@@ -1,0 +1,32 @@
+@model OrganizacionEventos.Models.Evento
+
+@{
+    ViewData["Title"] = "Evento registrado";
+}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white p-3">
+                    <h1 class="h4 mb-0">Evento registrado correctamente</h1>
+                </div>
+                <div class="card-body">
+                    <p class="text-secondary">Estos son los datos que enviaste:</p>
+                    <dl class="row mb-4">
+                        <dt class="col-sm-4">Nombre</dt>
+                        <dd class="col-sm-8">@Model.Nombre</dd>
+                        <dt class="col-sm-4">Fecha</dt>
+                        <dd class="col-sm-8">@Model.Fecha.ToString("dd/MM/yyyy")</dd>
+                        <dt class="col-sm-4">Lugar</dt>
+                        <dd class="col-sm-8">@Model.Lugar</dd>
+                        <dt class="col-sm-4">Categoría</dt>
+                        <dd class="col-sm-8">@Model.Categoria</dd>
+                    </dl>
+                    <a asp-action="Crear" class="btn btn-primary">Registrar otro evento</a>
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Ir al inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

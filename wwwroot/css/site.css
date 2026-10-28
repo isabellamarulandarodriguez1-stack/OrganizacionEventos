@@ -18,7 +18,59 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+  margin-bottom: 72px;
+  background-color: #feffaa;
+  color: #20233a;
+}
+
+.navbar {
+  min-height: 68px;
+}
+
+.brand-accent,
+.eyebrow {
+  color: #6750d8;
+}
+
+.hero-panel {
+  margin-top: 2rem;
+  background: linear-gradient(125deg, #f0edff 0%, #fbfaff 55%, #e7f7f4 100%);
+}
+
+.hero-panel .lead {
+  max-width: 38rem;
+  color: #5f6174;
+}
+
+.event-preview {
+  min-height: 220px;
+  background: #292443;
+  color: #fff;
+}
+
+.preview-icon {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border-radius: 50%;
+  background: #7460df;
+  font-size: 1.5rem;
+}
+
+.step-card {
+  border: 1px solid #1e00ff;
+  border-radius: 1rem;
+  background: #ffe4b6;
+}
+
+.step-number {
+  color: #6750d8;
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .08em;
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -27,5 +79,20 @@ body {
 }
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+  text-align: start; }
+
+.card-header {
+    background-color: #343a40 !important; 
+    border-color: #343a40 !important;
+}
+
+.btn-success {
+    background-color: #f8b303 !important; 
+    border-color: #495057 !important;
+    color: #ffffff !important;
+}
+
+.btn-success:hover {
+    background-color: #212529 !important;
+    border-color: #212529 !important;
 }

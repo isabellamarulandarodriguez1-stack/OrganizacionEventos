@@ -1,3 +1,5 @@
+
+
 namespace OrganizaciónEventos.Models;
 
 public class ErrorViewModel

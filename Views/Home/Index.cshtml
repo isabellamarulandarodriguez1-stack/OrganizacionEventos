@@ -1,8 +1,53 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<section class="hero-panel rounded-4 p-4 p-md-5 mb-5">
+    <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+            <p class="eyebrow mb-2">ORGANIZACIÓN DE EVENTOS</p>
+            <h1 class="display-5 fw-bold mb-3">Tus ideas merecen un gran evento.</h1>
+            <p class="lead mb-4">
+                Registra los datos principales de tu próximo encuentro y revisa la información antes de continuar.
+            </p>
+            <a asp-controller="Evento" asp-action="Crear" class="btn btn-primary btn-lg">
+                Registrar un evento
+            </a>
+        </div>
+        <div class="col-lg-5">
+            <div class="event-preview rounded-4 p-4">
+                
+               <div class="text-center my-3">
+    <img src="~/images/mesaEvento.jpg" alt="Mesa de evento" class="img-fluid rounded shadow" style="max-height: 350px; width: 100%; object-fit: cover;" />
+</div>
+                <p class="text-uppercase small fw-semibold mb-2">De la idea al encuentro</p>
+                <h2 class="h4 fw-bold">Un lugar para cada ocasión</h2>
+                <p class="mb-0">Conferencias, celebraciones y actividades culturales, organizadas en un solo flujo.</p>
+            </section>
+        </div>
+    </div>
+</section>
+
+<section class="row g-4 mb-4" aria-label="Pasos para registrar un evento">
+    <div class="col-md-4">
+        <article class="step-card h-100 p-4">
+            <span class="step-number">01</span>
+            <h2 class="h5 mt-3">Completa el formulario</h2>
+            <p class="mb-0 text-secondary">Escribe el nombre, fecha, lugar y categoría del evento.</p>
+        </article>
+    </div>
+    <div class="col-md-4">
+        <article class="step-card h-100 p-4">
+            <span class="step-number">02</span>
+            <h2 class="h5 mt-3">Validamos los datos</h2>
+            <p class="mb-0 text-secondary">El controlador procesa la información con las reglas del modelo.</p>
+        </article>
+    </div>
+    <div class="col-md-4">
+        <article class="step-card h-100 p-4">
+            <span class="step-number">03</span>
+            <h2 class="h5 mt-3">Revisa el resultado</h2>
+            <p class="mb-0 text-secondary">La vista de confirmación muestra el evento que acabas de registrar.</p>
+        </article>
+    </div>
 </div>
