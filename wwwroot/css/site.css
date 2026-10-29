@@ -96,3 +96,25 @@ body {
     background-color: #212529 !important;
     border-color: #212529 !important;
 }
+
+#confeti {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2000;
+}
+
+.confeti {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 14px;
+  animation: caida linear forwards;
+}
+
+@keyframes caida {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+  }
+}

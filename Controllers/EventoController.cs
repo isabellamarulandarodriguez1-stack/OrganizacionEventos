@@ -17,6 +17,7 @@ namespace OrganizacionEventos.Controllers
         {
             if (ModelState.IsValid)
             {
+                HttpContext.Session.SetString("EventoRegistrado", "true");
                 return View("Resultado", evento);
             }
 
