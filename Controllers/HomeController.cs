@@ -22,23 +22,23 @@ public class HomeController : Controller
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 
- public IActionResult RegistrosVisitantes()
+ public IActionResult RegistroVisitantes()
 {
     if (HttpContext.Session.GetString("EventoRegistrado") != "true")
     {
         return RedirectToAction("Crear", "Evento");
     }
 
-    return View("RegistroVisitantes"); // O simplemente puedes dejar solo return View(); si el archivo se llama exactamente igual que el método.
+    return View("RegistroVisitantes");
 }
 
 
-// Recibe los datos cuando el usuario completa el formulario y elige el pago
+
 [HttpPost]
 public IActionResult ProcesarPago(RegistroVisitanteViewModel modelo)
 {
-    // Aquí puedes guardar los datos temporalmente o pasarlos a una vista de éxito
+   
     TempData["Mensaje"] = $"¡Registro exitoso para {modelo.NombreCompleto}! Método de pago seleccionado: {modelo.MetodoPago}.";
-    return RedirectToAction("RegistrosVisitantes");
+    return RedirectToAction("RegistroVisitantes");
 }
 }
